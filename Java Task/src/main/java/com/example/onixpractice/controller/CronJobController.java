@@ -48,8 +48,6 @@ public class CronJobController {
         return new ResponseEntity<>(cronJobs, HttpStatus.OK);
     }
 
-    // Add more endpoints as needed
-
     // Request payload class
     static class CronJobRequest {
         private String expression;
