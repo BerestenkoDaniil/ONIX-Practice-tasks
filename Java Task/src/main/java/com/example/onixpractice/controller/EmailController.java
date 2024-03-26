@@ -16,7 +16,6 @@ public class EmailController {
     @Autowired
     private EmailService emailService;
 
-    // Endpoint to email a specific user
     @PostMapping("/send")
     public ResponseEntity<Void> sendEmail(@RequestBody EmailRequest emailRequest) {
         emailService.sendEmail(emailRequest.getUserId(),
@@ -25,9 +24,7 @@ public class EmailController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    // Add more endpoints as needed
 
-    // Request payload class
     static class EmailRequest {
         private Long userId;
         private String subject;
